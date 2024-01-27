@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Lamp.ma
-//Last modified: Sat, Jan 27, 2024 12:22:42 AM
+//Last modified: Sat, Jan 27, 2024 01:36:33 AM
 //Codeset: 1252
 requires maya "2024";
 currentUnit -l centimeter -a degree -t film;
@@ -9,18 +9,18 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19044)";
-fileInfo "UUID" "27EF415B-4E5C-8035-5F3F-EC9298A92F67";
+fileInfo "UUID" "6AABF3B3-491F-1C35-CC64-7FB3520F38C7";
 createNode transform -s -n "persp";
 	rename -uid "C731A69E-403D-0C88-BCB5-7FA8617E0A0F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 32.613071278863131 12.797920540323211 10.433305547494227 ;
-	setAttr ".r" -type "double3" -10.200000000001706 73.999999999991488 0 ;
+	setAttr ".t" -type "double3" 13.550944492259262 11.728516775446987 15.65195160321721 ;
+	setAttr ".r" -type "double3" -14.400000000000112 39.599999999993749 1.0319597720362399e-15 ;
 	setAttr ".rpt" -type "double3" 2.614766181931196e-16 -3.9565287077910931e-16 1.3086487979679794e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E04B29DF-4263-58F7-91D6-98A2CBD36635";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 32.397264050010037;
+	setAttr ".coi" 18.76898727044577;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -781,17 +781,10 @@ createNode mesh -n "pTorusShape1" -p "pTorus1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 12 ".pt";
-	setAttr ".pt[0]" -type "float3" 0.31372058 0 -0.22793138 ;
-	setAttr ".pt[1]" -type "float3" 0.11983053 0 -0.36880043 ;
-	setAttr ".pt[2]" -type "float3" -0.11983054 0 -0.36880043 ;
-	setAttr ".pt[3]" -type "float3" -0.31372058 0 -0.22793108 ;
-	setAttr ".pt[4]" -type "float3" -0.38777944 0 2.9588236e-08 ;
-	setAttr ".pt[5]" -type "float3" -0.31372058 0 0.22793135 ;
-	setAttr ".pt[6]" -type "float3" -0.11983053 0 0.36880043 ;
-	setAttr ".pt[7]" -type "float3" 0.11983053 0 0.36880043 ;
-	setAttr ".pt[8]" -type "float3" 0.31372058 0 0.22793135 ;
-	setAttr ".pt[9]" -type "float3" 0.38777944 0 6.4747967e-09 ;
+	setAttr -s 10 ".pt[0:9]" -type "float3"  0.31372058 0 -0.22793138 
+		0.11983053 0 -0.36880043 -0.11983054 0 -0.36880043 -0.31372058 0 -0.22793108 -0.38777944 
+		0 2.9588236e-08 -0.31372058 0 0.22793135 -0.11983053 0 0.36880043 0.11983053 0 0.36880043 
+		0.31372058 0 0.22793135 0.38777944 0 6.4747967e-09;
 createNode transform -n "pCylinder4";
 	rename -uid "9810953D-46A2-2E7E-960F-9BA268A97715";
 	setAttr ".t" -type "double3" -0.65163915548036933 10.771998636740905 0 ;
@@ -1411,20 +1404,20 @@ createNode mesh -n "pCylinderShape7" -p "pCylinder7";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "53E18672-4BAB-D610-8359-28961426A91A";
+	rename -uid "5BA68E84-478F-DDFE-8850-3BA6ABC7A018";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "4CEB4527-4486-E68F-946D-0AB645DDB7D5";
+	rename -uid "C6B2902D-40F7-0602-EC99-139F7BD22AFA";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "D47C9129-4851-303B-2BA1-E393A6BF5AB6";
+	rename -uid "192219B4-4078-765C-880E-1BB2CCF4C498";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7951DC0C-43D5-303E-0AE1-94937FE23113";
+	rename -uid "E243C888-42D3-F112-EDF8-B99CDBBE05D0";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "C8E9E7D7-42EE-64AE-A9C6-FF97CC99A4C0";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "5CEB4BFC-4AC2-44D6-F9BB-81BE01D988ED";
+	rename -uid "6F950DA6-4DFC-CDD0-63C0-D09E2B3B2882";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "1085FC45-4F95-F3D2-CB66-5F8CEDB91D7A";
 	setAttr ".g" yes;
@@ -1504,7 +1497,7 @@ createNode polyExtrudeFace -n "polyExtrudeFace1";
 createNode polyTweak -n "polyTweak1";
 	rename -uid "DCAA1448-4ED7-B304-07A6-C581588F17B2";
 	setAttr ".uopa" yes;
-	setAttr -s 44 ".tk";
+	setAttr -s 40 ".tk";
 	setAttr ".tk[0]" -type "float3" 0.15741134 -0.45797634 -0.11436598 ;
 	setAttr ".tk[1]" -type "float3" 0.060125686 -0.45797634 -0.18504772 ;
 	setAttr ".tk[2]" -type "float3" -0.060125683 -0.45797634 -0.18504781 ;
