@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Table.ma
-//Last modified: Fri, Jan 26, 2024 11:49:54 PM
+//Last modified: Fri, Jan 26, 2024 11:51:46 PM
 //Codeset: 1252
 requires maya "2024";
 currentUnit -l centimeter -a degree -t film;
@@ -9,12 +9,12 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19044)";
-fileInfo "UUID" "1879541C-491C-89C2-E24F-528772EE04E1";
+fileInfo "UUID" "94894550-4789-3858-DC77-98B698009F67";
 createNode transform -s -n "persp";
 	rename -uid "74597F89-47D1-6082-6B7C-7AADA8AD6DDC";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 21.955444915233791 7.1446529734940629 2.3935751644842229 ;
-	setAttr ".r" -type "double3" -10.799999999998557 83.199999999969904 6.7154731529274246e-15 ;
+	setAttr ".t" -type "double3" 12.757290875613704 7.8687248423679259 18.049600146452171 ;
+	setAttr ".r" -type "double3" -12.599999999999534 36.799999999970183 0 ;
 	setAttr ".rpt" -type "double3" 1.2946187768089349e-17 3.8077125051348775e-17 1.3450870097622122e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FDCD770C-4B1C-0AB7-6ECC-DAA694DD53B4";
