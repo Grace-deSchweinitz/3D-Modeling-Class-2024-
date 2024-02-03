@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: LampRemake1.ma
-//Last modified: Fri, Feb 02, 2024 09:13:36 PM
+//Last modified: Fri, Feb 02, 2024 09:16:03 PM
 //Codeset: 1252
 requires maya "2024";
 currentUnit -l centimeter -a degree -t film;
@@ -9,17 +9,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19044)";
-fileInfo "UUID" "EDA34296-43E0-8FE6-53CB-BC98F8202F7F";
+fileInfo "UUID" "17898577-4564-2811-96A9-40B32D50E409";
 createNode transform -s -n "persp";
 	rename -uid "28A1AB0C-4A55-3D82-6488-1F9B64D43D3F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -16.588712058975112 22.731657760911592 -6.5333651972892151 ;
-	setAttr ".r" -type "double3" -44.738352728984111 246.20000000005507 0 ;
+	setAttr ".t" -type "double3" -14.094114040483122 18.523599552891245 -15.457314483085669 ;
+	setAttr ".r" -type "double3" -33.338352728982173 220.6000000000538 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A7E815FF-4AD9-86B0-077F-E4A2789A7E85";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 25.968761362117831;
+	setAttr ".coi" 25.968761362117448;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -94,7 +94,7 @@ createNode mesh -n "pCube3Shape" -p "pCube3";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 7 "f[2]" "f[21:33]" "f[44:53]" "f[80:95]" "f[120:163]" "f[200:215]" "f[259]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 4 "f[1]" "f[9:10]" "f[256]" "f[261:268]";
-	setAttr ".pv" -type "double2" 0.625 0.37500001490116119 ;
+	setAttr ".pv" -type "double2" 0.6666666567325592 0.37500001490116119 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 502 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.625 0 0.625 0.25 0.625 0.5
@@ -1097,6 +1097,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "groupId1.id" "pCube3Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCube3Shape.iog.og[0].gco";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
