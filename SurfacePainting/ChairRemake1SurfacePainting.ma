@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
-//Name: ChairRemake1.ma
-//Last modified: Thu, Feb 15, 2024 07:41:07 PM
+//Name: ChairRemake1SurfacePainting.ma
+//Last modified: Thu, Feb 15, 2024 07:56:55 PM
 //Codeset: 1252
 requires maya "2024";
 currentUnit -l inch -a degree -t film;
@@ -9,12 +9,12 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "4B7AAD57-4D11-15C0-378D-60BB14B5D215";
+fileInfo "UUID" "7CE50EDF-41E4-97DF-2795-DCB1CB31A5BC";
 createNode transform -s -n "persp";
 	rename -uid "6CA2808B-4CCB-85B1-3B1B-2E8D02A3AFB2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.19845900744749106 4.4659548791931254 -5.0648420142788275 ;
-	setAttr ".r" -type "double3" -20.986564127487643 -1981.6219850847019 0 ;
+	setAttr ".t" -type "double3" 4.1558088026893811 4.2207610016787633 -3.0472282173338705 ;
+	setAttr ".r" -type "double3" -18.586564127484941 -2030.0219850846383 0 ;
 	setAttr ".rp" -type "double3" 3.4967654318902555e-16 -3.4967654318902555e-16 0 ;
 	setAttr ".rpt" -type "double3" 2.1842585618581311e-15 -8.2615915198835996e-16 -4.3881905010200659e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -621,6 +621,7 @@ createNode mesh -n "Seat1Shape" -p "Seat1";
 		227 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dfgi" 133;
+	setAttr ".dr" 1;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "B6A1225B-4883-7A24-7BE3-538D0DFD86D2";
 	setAttr -s 4 ".lnk";
@@ -778,6 +779,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "layer1.di" "imagePlane1.do";
 connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
@@ -825,4 +828,4 @@ connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "Metal_Matte.msg" ":defaultShaderList1.s" -na;
 connectAttr "SeatCOOVER.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of ChairRemake1.ma
+// End of ChairRemake1SurfacePainting.ma
