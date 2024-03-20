@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Fish.ma
-//Last modified: Wed, Mar 20, 2024 03:46:34 PM
+//Last modified: Wed, Mar 20, 2024 03:57:49 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "B4720185-4E8C-D957-7AA3-73A1EF275CFB";
+fileInfo "UUID" "23EDDA5F-4BEC-D220-11EC-23977CAA1914";
 createNode transform -s -n "persp";
 	rename -uid "915E471E-4490-1E6B-B555-ECA47F010D31";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.3708109820642598 35.865109559097156 21.192205910492319 ;
-	setAttr ".r" -type "double3" -377.73835274497736 3611.4000000086785 4.0557077009685611e-16 ;
+	setAttr ".t" -type "double3" 20.097460205546163 17.884038440059591 55.380368788802691 ;
+	setAttr ".r" -type "double3" -376.53835274361865 3980.9999999932047 8.5170880597084077e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FCC6AFC5-4820-76B2-9DA0-69B539EA58B2";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 24.995451795617448;
+	setAttr ".coi" 62.083112814811486;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -12018,8 +12018,9 @@ createNode mesh -n "polySurfaceShape1" -p "transform1";
 	setAttr -s 36 ".pt[35]" -type "float3"  0.017614841 -0.23429847 0.055079699;
 createNode transform -n "Caslte2";
 	rename -uid "0903D48A-4119-29E9-60F3-BA9E9E471C2A";
-	setAttr ".rp" -type "double3" -0.69761323928833008 30.288280717283101 -1.7448375225067139 ;
-	setAttr ".sp" -type "double3" -0.69761323928833008 30.288280717283101 -1.7448375225067139 ;
+	setAttr ".t" -type "double3" 0 -26.789652016013861 0 ;
+	setAttr ".rp" -type "double3" -0.69761323928833008 26.821144104003906 -1.7448375225067139 ;
+	setAttr ".sp" -type "double3" -0.69761323928833008 26.821144104003906 -1.7448375225067139 ;
 createNode mesh -n "Caslte2Shape" -p "Caslte2";
 	rename -uid "9AABDA72-43EA-6B20-2469-A58380F79D35";
 	setAttr -k off ".v";
@@ -12147,9 +12148,9 @@ createNode lambert -n "Caslte";
 createNode shadingEngine -n "lambert3SG";
 	rename -uid "D50C1B42-4B9E-43D7-9B87-819D6DBECF29";
 	setAttr ".ihi" 0;
-	setAttr -s 3 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 3 ".gn";
+	setAttr -s 4 ".gn";
 createNode materialInfo -n "materialInfo3";
 	rename -uid "3661B5DA-4B92-9586-045F-7E91805BC440";
 createNode blinn -n "Bowl";
@@ -12793,20 +12794,16 @@ createNode groupParts -n "groupParts1";
 createNode groupId -n "groupId13";
 	rename -uid "156807EC-478C-243A-5FA6-B6B19691913D";
 	setAttr ".ihi" 0;
-createNode groupId -n "groupId14";
-	rename -uid "99E12A09-4B50-B30F-EAAB-EA9BFED774F8";
-	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts2";
 	rename -uid "7B3376E2-4E04-DD91-9015-3B854875D6FE";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:1250]";
-createNode groupId -n "groupId15";
-	rename -uid "C6F70F4C-4278-5D33-5FB0-E1B2388FC00D";
-	setAttr ".ihi" 0;
+	setAttr ".gi" 113;
 createNode groupParts -n "groupParts3";
 	rename -uid "AB655BE0-4D89-DC6E-99D4-97AAA520E4F5";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[1251:1272]";
+	setAttr ".gi" 114;
 createNode deleteComponent -n "deleteComponent1";
 	rename -uid "ABB1AE2D-44F9-F045-517C-0EAD5BB5A007";
 	setAttr ".dc" -type "componentList" 1 "f[335]";
@@ -13055,6 +13052,187 @@ createNode polySplit -n "polySplit11";
 	setAttr -s 2 ".d[0:1]"  -2147481068 -2147483508;
 	setAttr ".sma" 180;
 	setAttr ".m2015" yes;
+createNode polyMergeVert -n "polyMergeVert51";
+	rename -uid "B7BA414B-4F2A-1360-ED3E-AEBB74E7E2B8";
+	setAttr ".ics" -type "componentList" 2 "vtx[130]" "vtx[1284]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 0.001;
+createNode polyTweak -n "polyTweak72";
+	rename -uid "0EA5E770-46A9-47AD-014F-C7944355D023";
+	setAttr ".uopa" yes;
+	setAttr -s 1318 ".tk[1284:1317]" -type "float3"  -0.0061237812 -0.013130188
+		 0.0022658929 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode polyMergeVert -n "polyMergeVert52";
+	rename -uid "C17D4EAB-4E3C-2234-B167-8DA9062BA15C";
+	setAttr ".ics" -type "componentList" 2 "vtx[207]" "vtx[1269]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 0.001;
+createNode polyTweak -n "polyTweak73";
+	rename -uid "BA1BB23F-40B7-F451-FAD7-0B8D1B29E5C3";
+	setAttr ".uopa" yes;
+	setAttr ".tk[1269]" -type "float3"  0.0022394657 -0.0099830627 0.0061223805;
+createNode polyMergeVert -n "polyMergeVert53";
+	rename -uid "C428DA6A-4ABB-238D-3616-96B0DC1794D4";
+	setAttr ".ics" -type "componentList" 2 "vtx[444]" "vtx[1283]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 0.001;
+createNode polyTweak -n "polyTweak74";
+	rename -uid "39802DAA-4750-5E1A-09F3-9DB9EB8AE6E6";
+	setAttr ".uopa" yes;
+	setAttr -s 1316 ".tk[1283:1315]" -type "float3"  0.0031385422 -0.015060425
+		 -0.0011276007 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode polyMergeVert -n "polyMergeVert54";
+	rename -uid "BE1BF4BF-4AF1-0983-F731-9AAB4DB783F8";
+	setAttr ".ics" -type "componentList" 2 "vtx[950]" "vtx[1269]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 0.001;
+createNode polyTweak -n "polyTweak75";
+	rename -uid "F8D7EF6F-4BE9-62B6-4B87-5EB6029A38F9";
+	setAttr ".uopa" yes;
+	setAttr ".tk[1269]" -type "float3"  -5.7220459e-05 -0.010038376 -0.00015640259;
+createNode polyCloseBorder -n "polyCloseBorder1";
+	rename -uid "97B33DB1-49F0-CBC7-6CFA-EEB9226D6BAC";
+	setAttr ".ics" -type "componentList" 9 "e[216]" "e[256]" "e[272]" "e[299]" "e[366]" "e[399]" "e[402]" "e[442]" "e[2544:2549]";
+createNode groupParts -n "groupParts4";
+	rename -uid "09114D4D-4606-718E-493F-D889BD8D816A";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[0:1248]" "f[1271:1297]";
+	setAttr ".gi" 117;
+createNode groupParts -n "groupParts5";
+	rename -uid "2CDF54EB-4F35-E5C9-7BC1-81A26B5356BA";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[1249:1270]";
+	setAttr ".gi" 118;
+createNode deleteComponent -n "deleteComponent3";
+	rename -uid "89E67477-4379-4F8F-3BBA-F890F085C798";
+	setAttr ".dc" -type "componentList" 1 "vtx[1263]";
+createNode deleteComponent -n "deleteComponent4";
+	rename -uid "6760F725-491B-4665-E565-448D66F337F8";
+	setAttr ".dc" -type "componentList" 1 "vtx[1263]";
+createNode deleteComponent -n "deleteComponent5";
+	rename -uid "083929B8-4910-6464-D58B-DA99FE17AC2A";
+	setAttr ".dc" -type "componentList" 1 "vtx[1266]";
+createNode deleteComponent -n "deleteComponent6";
+	rename -uid "3F5050BA-4A79-2137-922C-72B70EA3238E";
+	setAttr ".dc" -type "componentList" 1 "vtx[1265]";
+createNode polyAppendVertex -n "polyAppendVertex18";
+	rename -uid "8A4EE945-4F2F-B6A9-500E-9A8FFD59343D";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".d[0:3]"  140 159 1277 234;
+	setAttr ".tx" 2;
+createNode groupParts -n "groupParts6";
+	rename -uid "BCB96FC1-41A4-F48D-B354-BC802DBD3867";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[0:1248]" "f[1271:1297]";
+	setAttr ".gi" 123;
+createNode groupParts -n "groupParts7";
+	rename -uid "DAA89C7D-4254-F92A-F6AD-098ACE6D1266";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[1249:1270]" "f[1298]";
+	setAttr ".gi" 124;
+createNode polyAppendVertex -n "polyAppendVertex19";
+	rename -uid "9C4E9C1B-4BEA-DF2F-ABC1-0896C5CBC07E";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".d[0:3]"  564 1273 1275 531;
+	setAttr ".tx" 2;
+createNode groupId -n "groupId14";
+	rename -uid "E5241D44-4F45-AC8B-0585-0FA82BB9B7F9";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts8";
+	rename -uid "00CC7065-4D40-003E-67B8-A2B9F8A4054F";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[0:1248]" "f[1271:1297]";
+createNode groupId -n "groupId15";
+	rename -uid "5BF0052E-4EFC-83B8-BCFC-DEA015C4CE0B";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts9";
+	rename -uid "A16B0A7B-43C3-251A-09BB-B680543D2A6A";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[1249:1270]" "f[1298:1299]";
+createNode polyMergeVert -n "polyMergeVert55";
+	rename -uid "733F3EB4-4D06-7A5D-5717-8C8A76757AB1";
+	setAttr ".ics" -type "componentList" 2 "vtx[519]" "vtx[1275]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 0.001;
+createNode polyTweak -n "polyTweak76";
+	rename -uid "BC7B2E55-4A69-200D-166A-7AAEF9BF4545";
+	setAttr ".uopa" yes;
+	setAttr -s 1310 ".tk";
+	setAttr ".tk[519:684]" -type "float3"  -0.0025464296 0.013780594 -7.891655e-05
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0;
+createNode polyMergeVert -n "polyMergeVert56";
+	rename -uid "6F281336-4D21-2773-F172-BE8BB0D1F3E5";
+	setAttr ".ics" -type "componentList" 2 "vtx[513]" "vtx[544]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 0.001;
+createNode polyTweak -n "polyTweak77";
+	rename -uid "73AE8B9D-45C1-363D-8F69-AEAD765AC499";
+	setAttr ".uopa" yes;
+	setAttr ".tk[513]" -type "float3"  -0.0094509125 0.012313843 -0.018273115;
+createNode polyMergeVert -n "polyMergeVert57";
+	rename -uid "966EC686-4264-16CE-3895-CABBA2579EC3";
+	setAttr ".ics" -type "componentList" 2 "vtx[409]" "vtx[1273]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 0.001;
+createNode polyTweak -n "polyTweak78";
+	rename -uid "27289842-4E3B-869F-6716-C8B84431F6B0";
+	setAttr ".uopa" yes;
+	setAttr -s 1308 ".tk";
+	setAttr ".tk[581:746]" -type "float3"  -0.0034815073 0.014245987 -0.004119873
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0;
+	setAttr ".tk[1273:1307]" 0.00065922737 -0.0056724548 -0.0011969805 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode polyMergeVert -n "polyMergeVert58";
+	rename -uid "9177A9A1-40EA-1093-A7CE-4F9B65FA125A";
+	setAttr ".ics" -type "componentList" 2 "vtx[258]" "vtx[1273]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 0.001;
+createNode polyTweak -n "polyTweak79";
+	rename -uid "9353EB2B-4C2D-CF58-9AEE-CDBBAE32B923";
+	setAttr ".uopa" yes;
+	setAttr ".tk[1273]" -type "float3"  -0.00036931038 -0.0042304993 -0.0010739267;
+createNode polyMergeVert -n "polyMergeVert59";
+	rename -uid "832AB05D-43E5-1598-7BCA-8888184A4ADB";
+	setAttr ".ics" -type "componentList" 2 "vtx[1271]" "vtx[1289]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 0.001;
+createNode polyTweak -n "polyTweak80";
+	rename -uid "C61B306C-4D3E-F007-53F9-018E799D1C93";
+	setAttr ".uopa" yes;
+	setAttr -s 1306 ".tk[1271:1305]" -type "float3"  0.0069742799 -0.0072879791
+		 -0.0031258464 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -13077,9 +13255,9 @@ select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 3 ".dsm";
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 5 ".gn";
+	setAttr -s 4 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -13108,11 +13286,11 @@ connectAttr "groupId12.id" "polySurfaceShape1.iog.og[1].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurfaceShape1.iog.og[1].gco";
 connectAttr "groupParts1.og" "polySurfaceShape1.i";
 connectAttr "groupId13.id" "polySurfaceShape1.ciog.cog[1].cgid";
-connectAttr "polySplit11.out" "Caslte2Shape.i";
+connectAttr "polyMergeVert59.out" "Caslte2Shape.i";
 connectAttr "groupId14.id" "Caslte2Shape.iog.og[0].gid";
 connectAttr "lambert3SG.mwc" "Caslte2Shape.iog.og[0].gco";
 connectAttr "groupId15.id" "Caslte2Shape.iog.og[1].gid";
-connectAttr ":initialShadingGroup.mwc" "Caslte2Shape.iog.og[1].gco";
+connectAttr "lambert3SG.mwc" "Caslte2Shape.iog.og[1].gco";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
@@ -13153,9 +13331,11 @@ connectAttr "Caslte.oc" "lambert3SG.ss";
 connectAttr "CaslteShape1.iog.og[1]" "lambert3SG.dsm" -na;
 connectAttr "CaslteShape1.ciog.cog[1]" "lambert3SG.dsm" -na;
 connectAttr "Caslte2Shape.iog.og[0]" "lambert3SG.dsm" -na;
+connectAttr "Caslte2Shape.iog.og[1]" "lambert3SG.dsm" -na;
 connectAttr "groupId10.msg" "lambert3SG.gn" -na;
 connectAttr "groupId11.msg" "lambert3SG.gn" -na;
 connectAttr "groupId14.msg" "lambert3SG.gn" -na;
+connectAttr "groupId15.msg" "lambert3SG.gn" -na;
 connectAttr "lambert3SG.msg" "materialInfo3.sg";
 connectAttr "Caslte.msg" "materialInfo3.m";
 connectAttr "Bowl.oc" "blinn2SG.ss";
@@ -13318,9 +13498,7 @@ connectAttr "polySurfaceShape1.wm" "polyUnite1.im[1]";
 connectAttr "polyMergeVert33.out" "groupParts1.ig";
 connectAttr "groupId12.id" "groupParts1.gi";
 connectAttr "polyUnite1.out" "groupParts2.ig";
-connectAttr "groupId14.id" "groupParts2.gi";
 connectAttr "groupParts2.og" "groupParts3.ig";
-connectAttr "groupId15.id" "groupParts3.gi";
 connectAttr "groupParts3.og" "deleteComponent1.ig";
 connectAttr "deleteComponent1.og" "deleteComponent2.ig";
 connectAttr "polyTweak54.out" "polyMergeVert34.ip";
@@ -13382,6 +13560,48 @@ connectAttr "Caslte2Shape.wm" "polyMergeVert50.mp";
 connectAttr "polyMergeVert49.out" "polyTweak71.ip";
 connectAttr "polyMergeVert50.out" "polySplit10.ip";
 connectAttr "polySplit10.out" "polySplit11.ip";
+connectAttr "polyTweak72.out" "polyMergeVert51.ip";
+connectAttr "Caslte2Shape.wm" "polyMergeVert51.mp";
+connectAttr "polySplit11.out" "polyTweak72.ip";
+connectAttr "polyTweak73.out" "polyMergeVert52.ip";
+connectAttr "Caslte2Shape.wm" "polyMergeVert52.mp";
+connectAttr "polyMergeVert51.out" "polyTweak73.ip";
+connectAttr "polyTweak74.out" "polyMergeVert53.ip";
+connectAttr "Caslte2Shape.wm" "polyMergeVert53.mp";
+connectAttr "polyMergeVert52.out" "polyTweak74.ip";
+connectAttr "polyTweak75.out" "polyMergeVert54.ip";
+connectAttr "Caslte2Shape.wm" "polyMergeVert54.mp";
+connectAttr "polyMergeVert53.out" "polyTweak75.ip";
+connectAttr "polyMergeVert54.out" "polyCloseBorder1.ip";
+connectAttr "polyCloseBorder1.out" "groupParts4.ig";
+connectAttr "groupParts4.og" "groupParts5.ig";
+connectAttr "groupParts5.og" "deleteComponent3.ig";
+connectAttr "deleteComponent3.og" "deleteComponent4.ig";
+connectAttr "deleteComponent4.og" "deleteComponent5.ig";
+connectAttr "deleteComponent5.og" "deleteComponent6.ig";
+connectAttr "deleteComponent6.og" "polyAppendVertex18.ip";
+connectAttr "polyAppendVertex18.out" "groupParts6.ig";
+connectAttr "groupParts6.og" "groupParts7.ig";
+connectAttr "groupParts7.og" "polyAppendVertex19.ip";
+connectAttr "polyAppendVertex19.out" "groupParts8.ig";
+connectAttr "groupId14.id" "groupParts8.gi";
+connectAttr "groupParts8.og" "groupParts9.ig";
+connectAttr "groupId15.id" "groupParts9.gi";
+connectAttr "polyTweak76.out" "polyMergeVert55.ip";
+connectAttr "Caslte2Shape.wm" "polyMergeVert55.mp";
+connectAttr "groupParts9.og" "polyTweak76.ip";
+connectAttr "polyTweak77.out" "polyMergeVert56.ip";
+connectAttr "Caslte2Shape.wm" "polyMergeVert56.mp";
+connectAttr "polyMergeVert55.out" "polyTweak77.ip";
+connectAttr "polyTweak78.out" "polyMergeVert57.ip";
+connectAttr "Caslte2Shape.wm" "polyMergeVert57.mp";
+connectAttr "polyMergeVert56.out" "polyTweak78.ip";
+connectAttr "polyTweak79.out" "polyMergeVert58.ip";
+connectAttr "Caslte2Shape.wm" "polyMergeVert58.mp";
+connectAttr "polyMergeVert57.out" "polyTweak79.ip";
+connectAttr "polyTweak80.out" "polyMergeVert59.ip";
+connectAttr "Caslte2Shape.wm" "polyMergeVert59.mp";
+connectAttr "polyMergeVert58.out" "polyTweak80.ip";
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "pasted__blinn1SG.pa" ":renderPartition.st" -na;
@@ -13403,8 +13623,6 @@ connectAttr "groupId6.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId8.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId12.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId13.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId15.msg" ":initialShadingGroup.gn" -na;
 connectAttr "polySurfaceShape1.iog.og[1]" ":initialShadingGroup.dsm" -na;
 connectAttr "polySurfaceShape1.ciog.cog[1]" ":initialShadingGroup.dsm" -na;
-connectAttr "Caslte2Shape.iog.og[1]" ":initialShadingGroup.dsm" -na;
 // End of Fish.ma
