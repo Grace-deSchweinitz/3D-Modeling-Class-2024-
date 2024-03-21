@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Fish.ma
-//Last modified: Thu, Mar 21, 2024 04:55:18 PM
+//Last modified: Thu, Mar 21, 2024 04:58:13 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -10,18 +10,18 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "BE0AAB51-43E0-52AE-3D7C-ABBE7034A3FA";
+fileInfo "UUID" "2DE688F5-49E6-736E-61D0-A18DF8E3804C";
 createNode transform -s -n "persp";
 	rename -uid "915E471E-4490-1E6B-B555-ECA47F010D31";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -5.4243407939560582 3.8635295006484509 8.2306444063939423 ;
-	setAttr ".r" -type "double3" -0.60000000000006515 1391.5999999999626 -7.4851942807587695e-17 ;
+	setAttr ".t" -type "double3" 2.10077432570088 -1.8647367627830198 10.730442347285821 ;
+	setAttr ".r" -type "double3" 32.999999999953772 1435.1999999998945 3.9896857412749066e-16 ;
 	setAttr ".rpt" -type "double3" 9.7976100865220411e-16 -2.0075850251393117e-15 1.268115271513889e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FCC6AFC5-4820-76B2-9DA0-69B539EA58B2";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 8.7540304406204523;
+	setAttr ".coi" 11.335701253772008;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -12818,6 +12818,42 @@ createNode polyMapCut -n "polyMapCut15";
 	rename -uid "4B3D0886-45D1-E7ED-CFD7-6D84CD34F7A3";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 2 "e[166]" "e[168]";
+createNode polyMergeVert -n "polyMergeVert4";
+	rename -uid "AF4C7C1B-4AE3-7829-A29D-848593695EAB";
+	setAttr ".ics" -type "componentList" 1 "vtx[613:614]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 0.001;
+createNode polyTweak -n "polyTweak4";
+	rename -uid "0F6D821B-4325-D12D-1FA9-FAB7225FC410";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk";
+	setAttr ".tk[614]" -type "float3" -0.065339565 -0.29335213 0.13614559 ;
+createNode polyMapCut -n "polyMapCut16";
+	rename -uid "3C25D591-46B4-601A-F932-2FBC6BF0572B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[1203]";
+createNode polyTweak -n "polyTweak5";
+	rename -uid "B75823F3-4A2C-C85D-1E41-46A226721521";
+	setAttr ".uopa" yes;
+	setAttr -s 806 ".tk";
+	setAttr ".tk[613:778]" -type "float3"  0.063354254 0.070754528 0.18997312 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0;
+createNode polyMapCut -n "polyMapCut17";
+	rename -uid "950D1564-4645-C25E-C955-B1AF9D5DC40D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 6 "e[266]" "e[268]" "e[743]" "e[745]" "e[846]" "e[848]";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -12867,7 +12903,7 @@ connectAttr "groupId10.id" "Caslte2Shape.iog.og[0].gid";
 connectAttr "lambert3SG.mwc" "Caslte2Shape.iog.og[0].gco";
 connectAttr "groupId11.id" "Caslte2Shape.iog.og[1].gid";
 connectAttr "lambert3SG.mwc" "Caslte2Shape.iog.og[1].gco";
-connectAttr "polyMapCut15.out" "FISHShape.i";
+connectAttr "polyMapCut17.out" "FISHShape.i";
 connectAttr "groupId12.id" "FISHShape.iog.og[0].gid";
 connectAttr "lambert5SG.mwc" "FISHShape.iog.og[0].gco";
 connectAttr "groupId13.id" "FISHShape.iog.og[1].gid";
@@ -12962,6 +12998,12 @@ connectAttr "polyMapCut12.out" "polyMapCut13.ip";
 connectAttr "polyMapCut13.out" "polyMapCut14.ip";
 connectAttr "polyMapCut14.out" "polyMapSew1.ip";
 connectAttr "polyMapSew1.out" "polyMapCut15.ip";
+connectAttr "polyTweak4.out" "polyMergeVert4.ip";
+connectAttr "FISHShape.wm" "polyMergeVert4.mp";
+connectAttr "polyMapCut15.out" "polyTweak4.ip";
+connectAttr "polyTweak5.out" "polyMapCut16.ip";
+connectAttr "polyMergeVert4.out" "polyTweak5.ip";
+connectAttr "polyMapCut16.out" "polyMapCut17.ip";
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "pasted__blinn1SG.pa" ":renderPartition.st" -na;
