@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: IceCup.ma
-//Last modified: Fri, Mar 22, 2024 09:51:16 PM
+//Last modified: Mon, Mar 25, 2024 09:52:07 PM
 //Codeset: 1252
 requires maya "2024";
 currentUnit -l centimeter -a degree -t film;
@@ -9,19 +9,19 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "57E61200-4D2E-7B1E-2DC4-77A8F6C578D7";
+fileInfo "UUID" "AEE26F86-4D21-F9E4-69FE-A7923720F54B";
 createNode transform -s -n "persp";
 	rename -uid "8CE18352-4D26-DEE6-71C8-E58DF609B31F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.83895071110159591 23.121719436470187 -19.536502341644653 ;
-	setAttr ".r" -type "double3" 143.69440616832256 0.2398668670514652 179.99999999999994 ;
+	setAttr ".t" -type "double3" -25.971781574334429 24.061387576256003 -41.831264826159732 ;
+	setAttr ".r" -type "double3" 162.29440616831735 -30.560133132948476 179.9999999999998 ;
 	setAttr ".rp" -type "double3" -1.1449174941447006e-16 1.3877787807814457e-15 0 ;
 	setAttr ".rpt" -type "double3" -1.0968242344986942e-15 2.2857801475304721e-16 -3.229442615945809e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D550C9F7-4982-D052-5012-D2BC9ED58344";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 24.976184129628628;
+	setAttr ".coi" 51.714946751796319;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
